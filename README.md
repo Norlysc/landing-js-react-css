@@ -29,6 +29,8 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 
 🖼️ Capturas de pantalla 
 
+
+
 👩‍💻 Desarrollado por
 
 👤 Norlys Castañeda
