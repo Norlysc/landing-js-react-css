@@ -29,7 +29,9 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 
 🖼️ Capturas de pantalla 
 
+![landingPaxo](https://github.com/user-attachments/assets/c9c4a116-198c-464a-876d-a05ef63c1ebb)
 
+![landinGResp](https://github.com/user-attachments/assets/3d1fbbd4-c04c-47c9-8883-d555b04f6d53)
 
 👩‍💻 Desarrollado por
 
