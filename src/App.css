@@ -1,0 +1,777 @@
+body {
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el padding predeterminado del body */
+  font-family: Arial, sans-serif; /* Fuente predeterminada */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el scroll */
+}
+
+
+/* Estilos generales del Header */
+.header {
+  background: linear-gradient(90deg,  #f3ecec, #b10c0c, #0e0e80);
+
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  max-width: 200px; /* Ajusta según necesites */
+  height: auto;
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  gap: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(6, 5, 5, 0.612);
+  margin-right: 30px;
+
+}
+
+.menu a:hover {
+  background-color: rgba(186, 178, 178, 0.511);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(187, 180, 180, 0.3);
+ 
+}
+
+/* Botón menú hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    width: 85%;
+    background: rgba(23, 22, 22, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    border-radius:20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    margin-left: 30px;
+   
+  }
+}
+
+
+/* Estilos generales del Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Adaptable a pantallas pequeñas */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #b10c0c;
+  padding: 20px;
+}
+
+/* Imagen de fondo */
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Contenido del Hero */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+/* Títulos responsivos */
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Ajuste dinámico del tamaño */
+  text-shadow: 3px 3px 8px rgba(28, 28, 28, 0.5);
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(180, 168, 168, 0.3);
+  margin-right: 40px;
+}
+
+/* Botón estilizado */
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #b10c0c, #0e0e80);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-right: 40px;
+}
+
+/* Efecto hover */
+.hero-content button:hover {
+  background-color: #b10c0c;
+  transform: scale(1.05);
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    object-position: top;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content button {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar todo el contenido */
+  text-align: center; /* Alinear el texto */
+  margin: 20px 0; /* Espaciado vertical */
+  
+}
+
+
+
+/* Si deseas ajustar más detalles en el texto */
+.footer-logo p {
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+
+
+
+/* Estilos para el Footer */
+.footer {
+  background-color: #d7d7dc;
+  color: #0e0e80;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Logo y QR */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.qr-code img {
+  width: 130px;
+  margin-top: 40px;
+  margin: auto;
+}
+
+.qr-code p {
+  font-size: 2em;
+  color: #0e0e80;
+  
+}
+
+/* Información */
+.footer-info {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-info h3 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Enlaces y redes sociales */
+.footer-links {
+  text-align: left;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #b10c0c;
+  text-decoration: none;
+  margin: auto;
+  font-size: medium;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #b10c0c;
+  font-size: 1.8em;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #070984;
+}
+
+/* Línea final */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #070984;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-info,
+  .footer-links {
+      text-align: center;
+  }
+}
+
+
+
+/* Estilos para las Reseñas */
+.reviews {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4; /* Fondo claro para la sección */
+  margin-top: 70px;
+}
+
+h2 { 
+  font-size: 2.5em;
+    color: #0e0e80;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(28, 28, 28, 0.5);
+}
+
+.reviews-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.review {
+  background: linear-gradient(90deg,   #b10c0c,  #0e0e80);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px; /* Bordes más redondeados */
+  width: 300px;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.review:hover {
+  transform: translateY(-10px); /* Efecto de levantar la tarjeta */
+  box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+.review h3 {
+  margin-bottom: 10px;
+  color: #f8f0f0; /* Color de texto más oscuro */
+  font-size: 1.5em; /* Tamaño de fuente más grande */
+}
+
+.review p {
+  color: #f8e9e9; /* Color de texto gris para el contenido */
+  font-size: 1em;
+  line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Opcional: Agregar un ícono o decoración */
+.review::before {
+  content: "★★★★★";
+  display: block;
+  font-size: 2em;
+  color: #ffcc00; /* Color dorado para el ícono */
+  margin-bottom: 10px;
+}
+
+/* Estilos para los Casos de Éxito */
+/* Estilos para la sección de Casos de Éxito */
+.success-cases {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Fondo claro para la sección */
+}
+
+.success-cases h2 {
+  font-size: 2.5em;
+  color: #0e0e80;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-shadow: 3px 3px 8px rgba(28, 28, 28, 0.5);
+}
+
+.success-image {
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.cases-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre los casos */
+}
+
+.case {
+  background-color: #fff;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Para que las imágenes no sobresalgan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  width: 300px;
+  text-align: left;
+}
+
+.case:hover {
+  transform: translateY(-10px); /* Efecto de levantar la tarjeta */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+.case img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.case h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 20px 20px 10px;
+  font-weight: 600;
+}
+
+.case p {
+  font-size: 1em;
+  color: #666;
+  margin: 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* Efecto adicional para resaltar el hover */
+.case::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #8f0404; /* Color de acento */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Inicialmente invisible */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.case:hover::after {
+  transform: scaleX(1); /* Línea de acento al hacer hover */
+}
+
+.services {
+  text-align: center;
+  padding: 20px;
+}
+
+.service-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-image {
+  width: 60%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #8f0404, #2b2bbb);
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de información */
+.contact-info {
+  width: 45%;
+  color: white;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Formulario */
+.contact-form {
+  width: 50%;
+  background:  #dedeea;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  color: #b10c0c;;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 8px rgba(28, 28, 28, 0.5)
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #15ba43;
+  box-shadow: 0 0 8px rgba(189, 212, 237, 0.3);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón animado */
+.animated-button {
+  background: linear-gradient(90deg, red, blue);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 60%;
+  margin: auto;
+  
+}
+
+.animated-button:hover {
+  background: linear-gradient(90deg, rgb(41, 195, 185), rgb(9, 3, 86)); /* Invierte los colores del degradado */
+  transform: scale(1.05); /* Aumenta un poco el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    width: 75%;
+  }
+
+  .contact-info {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+
+/* Contenedor general */
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: blink 1s infinite alternate;
+}
+
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Icono flotante de chat */
+.chat-icon {
+  background-color: #12902b;
+  color: white;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chat-icon:hover {
+  background: linear-gradient(90deg, #b10c0c, #0e0e80);
+ 
+}
+
+/* Ventana del chatbot */
+.chatbot {
+  width: 320px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+}
+
+/* Encabezado */
+.chat-header {
+  background: linear-gradient(90deg, #b10c0c, #0e0e80);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mensajes */
+.chatbot-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 10px;
+ 
+}
+
+.message {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 75%;
+}
+
+.message.user {
+ background: linear-gradient(90deg, #0cb151, #0e0e80);
+  color: white;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background-color: #ddd;
+  color: black;
+  align-self: flex-start;
+}
+
+/* Entrada de texto */
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.chatbot-input button {
+  background: linear-gradient(90deg, #b10c0c, #0e0e80);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.chatbot-input button:hover {
+  background: #e63939;
+}
+
+
+
+
